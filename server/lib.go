@@ -1,4 +1,4 @@
-package main
+package server
 
 import (
 	"flag"
@@ -13,9 +13,10 @@ import (
 	"github.com/mochi-co/mqtt/v2/listeners"
 )
 
-var tcpPort = flag.Int("tcp-port", 1883, "TCP port number to listen on")
+var PORT = 1883
 
-func main() {
+func Serve() {
+	var tcpPort = flag.Int("tcp-port", PORT, "TCP port number to listen on")
 	flag.Parse()
 
 	sigs := make(chan os.Signal, 1)
