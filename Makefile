@@ -26,10 +26,6 @@ init:
 # precommit.rehooks:
 # 	pre-commit install --hook-type commit-msg
 
-check:
-	golangci-lint run --fix
-
-# FILES=$(go list ./... | grep -v /vendor/)
 test:
 	go test -tags=unit -timeout 30s -short -v ./...
 
