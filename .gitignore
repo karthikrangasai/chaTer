@@ -20,7 +20,7 @@
 !/LICENSE
 
 !/.golangci.yaml
-# !/.pre-commit-config.yaml
+!/.pre-commit-config.yaml
 !/Makefile
 
 !/Containerfile
